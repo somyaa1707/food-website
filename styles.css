@@ -1,0 +1,357 @@
+:root {
+  font-size: 62.5%; /* 1rem = 10px */
+  --primary-color: #e67e22;
+  --text-color: #333;
+  --bg-light: #fdf2e9;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #fff;
+  margin: 0;
+}
+
+/* Layout Helpers */
+.container {
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 2rem;
+  font-size: large;
+  background-color:var(--bg-light);
+}
+
+/* Header and Navigation */
+.header {
+  /*background-color: var(--bg-light);*/
+  padding: 4rem 2rem;
+}
+/* Wrapper for logo + heading */
+.logo-heading {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  font-size: larger;
+}
+
+/* Logo */
+.logo img {
+  height: 6rem;
+}
+
+/* Brand heading */
+.brand-name {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0;
+}
+
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem 4rem;
+  background-color: white;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+.logo img {
+  height: 6rem;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Highlight CTA button */
+.nav-links .btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.nav-links .btn:hover {
+  background-color: #cf711f;
+}
+
+/* Sticky header on scroll effect */
+.header {
+  position: relative;
+  z-index: 90;
+}
+
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.6rem;
+}
+
+.hero p {
+  font-size: 1.8rem;
+}
+
+.hero-img {
+  width: 90%;
+  max-width: 50rem;
+}
+
+/* Features Section */
+.features {
+  background-color: #fff;
+  padding: 6rem 0;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 4rem;
+  margin-top: 4rem;
+}
+
+.feature-card {
+  background-color:papayawhip;
+  padding: 2rem;
+  border-radius: 0.8rem;
+  text-align: center;
+  transition: transform 0.3s;
+  font-style: italic;
+}
+
+.feature-card:hover {
+  transform: translateY(-1rem);
+}
+
+/* CTA Section */
+.cta {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 6rem 2rem;
+}
+
+.cta h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.4rem;
+}
+
+/* Buttons */
+.btn {
+  padding: 1.2rem 2.4rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #cf711f;
+}
+
+/* Responsive */
+@media (min-width: 48em) {
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+  }
+
+  .hero-text {
+    max-width: 50%;
+  }
+
+ .hero-img-full {
+  width: 100vw;      /* full width of the viewport */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+}
+.feature-card img {
+  max-width: 20rem;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+
+.hero-text.overlay-text {
+   position: absolute;
+  z-index: 2; /* Above the overlay */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+}
+#cta {
+  position: relative;
+  background-image: url('assets/new1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: white;
+  overflow: hidden;
+}
+
+#cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  z-index: 1;
+}
+
+#cta .container1 {
+  position: relative;
+  z-index: 2; /* Ensures the text stays above the overlay */
+}
+.hero-img-full {
+  width: 100vw;
+  height: 80vh;
+  background-image: url('assets/hero-img.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+.hero-img-full::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: dark overlay */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  font-size:large;
+}
+.floating-images {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 0;
+  /* No background color for transparent bg */
+  background-color: transparent;
+}
+
+.image-track {
+  display: flex;
+  gap: 2rem;            /* slightly tighter gap */
+  width: max-content;
+  animation: scroll-left 20s linear infinite; /* faster speed: 20s */
+}
+
+.floating-images .duplicate {
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+
+.floating-images img {
+  height: 6rem;         /* slightly smaller for circle */
+  width: 6rem;          /* equal width for round shape */
+  object-fit: cover;    /* cover to fill the circle */
+  border-radius: 50%;   /* makes the images round */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* subtle shadow */
+  transition: transform 0.6s ease;
+  background-color: transparent;  /* just in case */
+}
+
+.floating-images img:hover {
+  transform: scale(1.2);
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
