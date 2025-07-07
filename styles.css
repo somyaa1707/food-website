@@ -355,3 +355,52 @@ body,html {
     transform: translateX(-100%);
   }
 }
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  font-size: 1rem;
+  padding: 1em;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    display: none; /* Hidden by default on mobile */
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
